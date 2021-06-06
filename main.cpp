@@ -1,0 +1,25 @@
+﻿#include <iostream>
+#include <string>
+
+#include "command.h"
+
+using namespace std;
+
+int main(int argn, char** argc)
+{
+	if (argn != 2)
+	{
+		cout << "Usage: bulk <commands count>";
+			return -1;
+	}
+
+	string s;
+	Command cmd{ atoi(argc[1]) };
+
+	while (cin >> s)
+	{
+		if (cmd.ProcessCommand(s) == false) break;
+	}
+
+	return 0;
+}

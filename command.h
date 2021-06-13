@@ -22,14 +22,14 @@ class ICommandHandler {
 public:
 
 	ICommandHandler() = delete;
-	explicit ICommandHandler(int count) : count_{ count } {}
+	explicit ICommandHandler(size_t count) : count_{ count } {}
 	virtual ~ICommandHandler() = default;
 
     virtual ICommandHandlerPtr ProcessCommand(Command*, const std::string&, bool& exit) = 0;
 
 protected:
 
-	const int count_;
+	const size_t count_;
 };
 
 /**
@@ -39,7 +39,7 @@ class Command
 {
 public:
 
-	explicit Command(int count);
+	explicit Command(size_t count);
 	~Command() = default;
 
 	void PushPool(const std::string& s);
@@ -69,7 +69,7 @@ public:
 
 private:
 
-	const int count_;
+	const size_t count_;
 	long long firstCmdTime_ = 0;
 	ICommandHandlerPtr handler_;
 	std::vector<std::string> pool_;
@@ -84,7 +84,7 @@ class StaticCommandHandler : public ICommandHandler
 public:
 
 	StaticCommandHandler() = delete;
-	StaticCommandHandler(int count) : ICommandHandler(count) {}
+	StaticCommandHandler(size_t count) : ICommandHandler(count) {}
 	~StaticCommandHandler() = default;
 
 	ICommandHandlerPtr ProcessCommand(Command* cmd, const std::string& s, bool& exit) override;
@@ -98,12 +98,12 @@ class DynamicCommandHandler : public ICommandHandler
 public:
 
 	DynamicCommandHandler() = delete;
-	DynamicCommandHandler(int count) : ICommandHandler(count) {}
+	DynamicCommandHandler(size_t count) : ICommandHandler(count) {}
 	~DynamicCommandHandler() = default;
 
 	ICommandHandlerPtr ProcessCommand(Command* cmd, const std::string& s, bool& exit) override;
 
 private:
 
-	int openBraceCount_ = 0;
+	size_t openBraceCount_ = 0;
 };

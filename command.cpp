@@ -69,7 +69,7 @@ ICommandHandlerPtr DynamicCommandHandler::ProcessCommand(Command* cmd, const std
 	return nullptr;
 }
 
-Command::Command(int count) : count_{ count }
+Command::Command(size_t count) : count_{ count }
 {
 	handler_ = ICommandHandlerPtr{ new StaticCommandHandler(count_) };
 
@@ -113,7 +113,7 @@ void Command::PrintPool()
 	{
 		PrintString("bulk: ");
 
-		for(int i=0; i < pool_.size(); ++i)
+		for(size_t i=0; i < pool_.size(); ++i)
 		{
 			PrintString(pool_[i]);
 

@@ -73,28 +73,26 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aa7c218ccfb4f7e0883f4d0097d698324"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_command.html#aa7c218ccfb4f7e0883f4d0097d698324">Command</a> (int count)</td></tr>
-<tr class="separator:aa7c218ccfb4f7e0883f4d0097d698324"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a418a47e79c5907060b8cb442c6555b47"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_command.html#a418a47e79c5907060b8cb442c6555b47">Command</a> (size_t count)</td></tr>
+<tr class="separator:a418a47e79c5907060b8cb442c6555b47"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeb859659170f88a5a3f4ad3e9253c449"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_command.html#aeb859659170f88a5a3f4ad3e9253c449">~Command</a> ()=default</td></tr>
 <tr class="separator:aeb859659170f88a5a3f4ad3e9253c449"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aada00a0ad2d6c823f13b161006cbd420"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_command.html#aada00a0ad2d6c823f13b161006cbd420">SetCurrent</a> (<a class="el" href="command_8h.html#ae573d28999a156791912f846e17fc750">ICommandHandlerPtr</a> hPtr)</td></tr>
-<tr class="separator:aada00a0ad2d6c823f13b161006cbd420"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac0a5aea04ec40da1d24c02d0541d308d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_command.html#ac0a5aea04ec40da1d24c02d0541d308d">PushPool</a> (const std::string &amp;s)</td></tr>
 <tr class="separator:ac0a5aea04ec40da1d24c02d0541d308d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaecb96a70a928f14d1fc1203912489c3"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_command.html#aaecb96a70a928f14d1fc1203912489c3">GetPoolSize</a> ()</td></tr>
 <tr class="separator:aaecb96a70a928f14d1fc1203912489c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a28395b97e5c7bd9dc445aaf127872a35"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_command.html#a28395b97e5c7bd9dc445aaf127872a35">PrintPool</a> ()</td></tr>
 <tr class="separator:a28395b97e5c7bd9dc445aaf127872a35"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aead11436a46acd93137f7d58b85e343c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_command.html#aead11436a46acd93137f7d58b85e343c">PrintString</a> (std::fstream &amp;f, const std::string &amp;s)</td></tr>
-<tr class="separator:aead11436a46acd93137f7d58b85e343c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a10e83608c398fe31e59802d5b73c8498"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_command.html#a10e83608c398fe31e59802d5b73c8498">PrintString</a> (const std::string &amp;s) const</td></tr>
+<tr class="separator:a10e83608c398fe31e59802d5b73c8498"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a96e0fefe59247152904e19f5b0a9c3a4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_command.html#a96e0fefe59247152904e19f5b0a9c3a4">ProcessCommand</a> (const std::string &amp;cmd)</td></tr>
 <tr class="separator:a96e0fefe59247152904e19f5b0a9c3a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Обработка команд </p>
+<div class="textblock"><p>Process command </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="aa7c218ccfb4f7e0883f4d0097d698324"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa7c218ccfb4f7e0883f4d0097d698324">&#9670;&nbsp;</a></span>Command()</h2>
+<a id="a418a47e79c5907060b8cb442c6555b47"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a418a47e79c5907060b8cb442c6555b47">&#9670;&nbsp;</a></span>Command()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -105,7 +103,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">Command::Command </td>
           <td>(</td>
-          <td class="paramtype">int&#160;</td>
+          <td class="paramtype">size_t&#160;</td>
           <td class="paramname"><em>count</em></td><td>)</td>
           <td></td>
         </tr>
@@ -184,12 +182,12 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Вывод блока команд </p>
+<p>Output block of commands </p>
 
 </div>
 </div>
-<a id="aead11436a46acd93137f7d58b85e343c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aead11436a46acd93137f7d58b85e343c">&#9670;&nbsp;</a></span>PrintString()</h2>
+<a id="a10e83608c398fe31e59802d5b73c8498"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a10e83608c398fe31e59802d5b73c8498">&#9670;&nbsp;</a></span>PrintString()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -197,23 +195,13 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">void Command::PrintString </td>
           <td>(</td>
-          <td class="paramtype">std::fstream &amp;&#160;</td>
-          <td class="paramname"><em>f</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
           <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>s</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramname"><em>s</em></td><td>)</td>
+          <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Вывод строки в консоль и в файл </p>
+<p>Output string </p>
 
 </div>
 </div>
@@ -258,33 +246,7 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Добавление команды в блок команд </p>
-
-</div>
-</div>
-<a id="aada00a0ad2d6c823f13b161006cbd420"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aada00a0ad2d6c823f13b161006cbd420">&#9670;&nbsp;</a></span>SetCurrent()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Command::SetCurrent </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="command_8h.html#ae573d28999a156791912f846e17fc750">ICommandHandlerPtr</a>&#160;</td>
-          <td class="paramname"><em>hPtr</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
+<p>Add command int the block </p>
 
 </div>
 </div>

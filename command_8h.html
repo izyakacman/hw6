@@ -74,17 +74,19 @@ $(function() {
 <code>#include &lt;vector&gt;</code><br />
 <code>#include &lt;memory&gt;</code><br />
 <code>#include &lt;fstream&gt;</code><br />
+<code>#include &quot;<a class="el" href="writer_8h_source.html">writer.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for command.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="command_8h__incl.png" border="0" usemap="#acommand_8h" alt=""/></div>
 <map name="acommand_8h" id="acommand_8h">
-<area shape="rect" title=" " alt="" coords="166,5,255,32"/>
-<area shape="rect" title=" " alt="" coords="5,80,77,107"/>
-<area shape="rect" title=" " alt="" coords="102,80,157,107"/>
-<area shape="rect" title=" " alt="" coords="181,80,240,107"/>
-<area shape="rect" title=" " alt="" coords="265,80,333,107"/>
-<area shape="rect" title=" " alt="" coords="357,80,424,107"/>
+<area shape="rect" title=" " alt="" coords="161,5,250,32"/>
+<area shape="rect" title=" " alt="" coords="5,155,77,181"/>
+<area shape="rect" title=" " alt="" coords="243,155,298,181"/>
+<area shape="rect" title=" " alt="" coords="132,80,191,107"/>
+<area shape="rect" title=" " alt="" coords="215,80,283,107"/>
+<area shape="rect" title=" " alt="" coords="308,80,375,107"/>
+<area shape="rect" href="writer_8h.html" title=" " alt="" coords="44,80,108,107"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -108,13 +110,15 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_static_command_handler.html">StaticCommandHandler</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_dinamic_command_handler.html">DinamicCommandHandler</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_dynamic_command_handler.html">DynamicCommandHandler</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
 <tr class="memitem:ae573d28999a156791912f846e17fc750"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="command_8h.html#ae573d28999a156791912f846e17fc750">ICommandHandlerPtr</a> = std::unique_ptr&lt; <a class="el" href="class_i_command_handler.html">ICommandHandler</a> &gt;</td></tr>
 <tr class="separator:ae573d28999a156791912f846e17fc750"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae253999d0dbb6f4188bb43a577fa9e7d"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="command_8h.html#ae253999d0dbb6f4188bb43a577fa9e7d">IWriterPtr</a> = std::unique_ptr&lt; <a class="el" href="class_i_writer.html">IWriter</a> &gt;</td></tr>
+<tr class="separator:ae253999d0dbb6f4188bb43a577fa9e7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
@@ -130,6 +134,20 @@ Variables</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">using <a class="el" href="command_8h.html#ae573d28999a156791912f846e17fc750">ICommandHandlerPtr</a> =  std::unique_ptr&lt;<a class="el" href="class_i_command_handler.html">ICommandHandler</a>&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae253999d0dbb6f4188bb43a577fa9e7d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae253999d0dbb6f4188bb43a577fa9e7d">&#9670;&nbsp;</a></span>IWriterPtr</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="command_8h.html#ae253999d0dbb6f4188bb43a577fa9e7d">IWriterPtr</a> =  std::unique_ptr&lt;<a class="el" href="class_i_writer.html">IWriter</a>&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">

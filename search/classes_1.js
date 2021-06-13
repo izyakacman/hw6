@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['dinamiccommandhandler_47',['DinamicCommandHandler',['../class_dinamic_command_handler.html',1,'']]]
+  ['dynamiccommandhandler_57',['DynamicCommandHandler',['../class_dynamic_command_handler.html',1,'']]]
 ];

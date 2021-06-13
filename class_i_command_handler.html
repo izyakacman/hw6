@@ -76,9 +76,9 @@ Inheritance diagram for ICommandHandler:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_i_command_handler__inherit__graph.png" border="0" usemap="#a_i_command_handler_inherit__map" alt="Inheritance graph"/></div>
 <map name="a_i_command_handler_inherit__map" id="a_i_command_handler_inherit__map">
-<area shape="rect" title=" " alt="" coords="121,5,252,32"/>
-<area shape="rect" href="class_dinamic_command_handler.html" title=" " alt="" coords="5,80,179,107"/>
-<area shape="rect" href="class_static_command_handler.html" title=" " alt="" coords="203,80,363,107"/>
+<area shape="rect" title=" " alt="" coords="124,5,255,32"/>
+<area shape="rect" href="class_dynamic_command_handler.html" title=" " alt="" coords="5,80,181,107"/>
+<area shape="rect" href="class_static_command_handler.html" title=" " alt="" coords="205,80,365,107"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -86,20 +86,20 @@ Inheritance diagram for ICommandHandler:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a3b251ac7cfaecfd22951cd28de01d18e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_command_handler.html#a3b251ac7cfaecfd22951cd28de01d18e">ICommandHandler</a> ()=delete</td></tr>
 <tr class="separator:a3b251ac7cfaecfd22951cd28de01d18e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac55d5c01b8556de3d96344db18735770"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_command_handler.html#ac55d5c01b8556de3d96344db18735770">ICommandHandler</a> (int count)</td></tr>
-<tr class="separator:ac55d5c01b8556de3d96344db18735770"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6ee2d90669714bcb6d6199363c4b1a0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_command_handler.html#ae6ee2d90669714bcb6d6199363c4b1a0">ICommandHandler</a> (size_t count)</td></tr>
+<tr class="separator:ae6ee2d90669714bcb6d6199363c4b1a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2c2d11b6bd94d4bd721935b793fcd33d"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_command_handler.html#a2c2d11b6bd94d4bd721935b793fcd33d">~ICommandHandler</a> ()=default</td></tr>
 <tr class="separator:a2c2d11b6bd94d4bd721935b793fcd33d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a61a66074b71b7312750cac570b79268e"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_command_handler.html#a61a66074b71b7312750cac570b79268e">ProcessCommand</a> (<a class="el" href="class_command.html">Command</a> *, const std::string &amp;)=0</td></tr>
-<tr class="separator:a61a66074b71b7312750cac570b79268e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3bc9861070a74343168464a87f3da54a"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="command_8h.html#ae573d28999a156791912f846e17fc750">ICommandHandlerPtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_command_handler.html#a3bc9861070a74343168464a87f3da54a">ProcessCommand</a> (<a class="el" href="class_command.html">Command</a> *, const std::string &amp;, bool &amp;exit)=0</td></tr>
+<tr class="separator:a3bc9861070a74343168464a87f3da54a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:a815712cdf70cb511bd64c645b305286a"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_command_handler.html#a815712cdf70cb511bd64c645b305286a">m_count</a></td></tr>
-<tr class="separator:a815712cdf70cb511bd64c645b305286a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45a1e73089b7aa5fe83dcb45fd19e7a1"><td class="memItemLeft" align="right" valign="top">const size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_command_handler.html#a45a1e73089b7aa5fe83dcb45fd19e7a1">count_</a></td></tr>
+<tr class="separator:a45a1e73089b7aa5fe83dcb45fd19e7a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Интерфейс обработчика команд </p>
+<div class="textblock"><p><a class="el" href="class_command.html">Command</a> handler interface </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a3b251ac7cfaecfd22951cd28de01d18e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3b251ac7cfaecfd22951cd28de01d18e">&#9670;&nbsp;</a></span>ICommandHandler() <span class="overload">[1/2]</span></h2>
@@ -126,8 +126,8 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="ac55d5c01b8556de3d96344db18735770"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac55d5c01b8556de3d96344db18735770">&#9670;&nbsp;</a></span>ICommandHandler() <span class="overload">[2/2]</span></h2>
+<a id="ae6ee2d90669714bcb6d6199363c4b1a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae6ee2d90669714bcb6d6199363c4b1a0">&#9670;&nbsp;</a></span>ICommandHandler() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -138,7 +138,7 @@ Protected Attributes</h2></td></tr>
         <tr>
           <td class="memname">ICommandHandler::ICommandHandler </td>
           <td>(</td>
-          <td class="paramtype">int&#160;</td>
+          <td class="paramtype">size_t&#160;</td>
           <td class="paramname"><em>count</em></td><td>)</td>
           <td></td>
         </tr>
@@ -178,8 +178,8 @@ Protected Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a61a66074b71b7312750cac570b79268e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a61a66074b71b7312750cac570b79268e">&#9670;&nbsp;</a></span>ProcessCommand()</h2>
+<a id="a3bc9861070a74343168464a87f3da54a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3bc9861070a74343168464a87f3da54a">&#9670;&nbsp;</a></span>ProcessCommand()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -188,7 +188,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual bool ICommandHandler::ProcessCommand </td>
+          <td class="memname">virtual <a class="el" href="command_8h.html#ae573d28999a156791912f846e17fc750">ICommandHandlerPtr</a> ICommandHandler::ProcessCommand </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="class_command.html">Command</a> *&#160;</td>
           <td class="paramname">, </td>
@@ -197,7 +197,13 @@ Protected Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname">&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool &amp;&#160;</td>
+          <td class="paramname"><em>exit</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -212,13 +218,13 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="class_dinamic_command_handler.html#a7ef2fe70c00acc3919d13515f2791a77">DinamicCommandHandler</a>, and <a class="el" href="class_static_command_handler.html#a69af63b75ff0739f8bf47d82d7614847">StaticCommandHandler</a>.</p>
+<p>Implemented in <a class="el" href="class_dynamic_command_handler.html#a82799814b1609e27baa0ca18c1428f60">DynamicCommandHandler</a>, and <a class="el" href="class_static_command_handler.html#a995a55e4e101ec81e389b1f4368391bb">StaticCommandHandler</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="a815712cdf70cb511bd64c645b305286a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a815712cdf70cb511bd64c645b305286a">&#9670;&nbsp;</a></span>m_count</h2>
+<a id="a45a1e73089b7aa5fe83dcb45fd19e7a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a45a1e73089b7aa5fe83dcb45fd19e7a1">&#9670;&nbsp;</a></span>count_</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -227,7 +233,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const int ICommandHandler::m_count</td>
+          <td class="memname">const size_t ICommandHandler::count_</td>
         </tr>
       </table>
   </td>

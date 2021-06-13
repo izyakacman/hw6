@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['endoffilestring_80',['EndOfFileString',['../command_8h.html#adf47192204d6bde45fca818fc899dccd',1,'command.h']]]
+  ['count_5f_100',['count_',['../class_i_command_handler.html#a45a1e73089b7aa5fe83dcb45fd19e7a1',1,'ICommandHandler']]]
 ];

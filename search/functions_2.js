@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['dinamiccommandhandler_65',['DinamicCommandHandler',['../class_dinamic_command_handler.html#a736a341f44965d2cfb3c1c42a1c25bc6',1,'DinamicCommandHandler::DinamicCommandHandler()=delete'],['../class_dinamic_command_handler.html#a5d51eadcee2dac26e43701f66cf9f3ed',1,'DinamicCommandHandler::DinamicCommandHandler(int count)']]]
+  ['dynamiccommandhandler_79',['DynamicCommandHandler',['../class_dynamic_command_handler.html#ac66bda4e24309e1b943fc22d26a7cfc7',1,'DynamicCommandHandler::DynamicCommandHandler()=delete'],['../class_dynamic_command_handler.html#ac9607579360cde7dee67c642b2ac84ed',1,'DynamicCommandHandler::DynamicCommandHandler(size_t count)']]]
 ];

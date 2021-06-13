@@ -1,8 +1,9 @@
 var searchData=
 [
-  ['set_36',['set',['../_c_make_lists_8txt.html#a9267ccdfbbaf6ba4f55c35f3a1f7fd90',1,'CMakeLists.txt']]],
-  ['setcurrent_37',['SetCurrent',['../class_command.html#aada00a0ad2d6c823f13b161006cbd420',1,'Command']]],
-  ['staticcommandhandler_38',['StaticCommandHandler',['../class_static_command_handler.html',1,'StaticCommandHandler'],['../class_static_command_handler.html#a4c627835bdb42b65fa97ff8bce317252',1,'StaticCommandHandler::StaticCommandHandler()=delete'],['../class_static_command_handler.html#a5d2ad0e3b221a22b1e323f0ff393c3b4',1,'StaticCommandHandler::StaticCommandHandler(int count)']]],
-  ['stringify_39',['STRINGIFY',['../_c_make_c_compiler_id_8c.html#a43e1cad902b6477bec893cb6430bd6c8',1,'STRINGIFY():&#160;CMakeCCompilerId.c'],['../_c_make_c_x_x_compiler_id_8cpp.html#a43e1cad902b6477bec893cb6430bd6c8',1,'STRINGIFY():&#160;CMakeCXXCompilerId.cpp']]],
-  ['stringify_5fhelper_40',['STRINGIFY_HELPER',['../_c_make_c_compiler_id_8c.html#a2ae9b72bb13abaabfcf2ee0ba7d3fa1d',1,'STRINGIFY_HELPER():&#160;CMakeCCompilerId.c'],['../_c_make_c_x_x_compiler_id_8cpp.html#a2ae9b72bb13abaabfcf2ee0ba7d3fa1d',1,'STRINGIFY_HELPER():&#160;CMakeCXXCompilerId.cpp']]]
+  ['platform_5fid_35',['PLATFORM_ID',['../_c_make_c_compiler_id_8c.html#adbc5372f40838899018fadbc89bd588b',1,'PLATFORM_ID():&#160;CMakeCCompilerId.c'],['../_c_make_c_x_x_compiler_id_8cpp.html#adbc5372f40838899018fadbc89bd588b',1,'PLATFORM_ID():&#160;CMakeCXXCompilerId.cpp']]],
+  ['print_36',['Print',['../class_i_writer.html#a77b88e2a7a1bbe279acccfb18dce375b',1,'IWriter::Print()'],['../class_cout_writer.html#a9800a1c67a4e8fe45f36acf534eeafc9',1,'CoutWriter::Print()'],['../class_file_writer.html#a9096e8e8f91ec12e5aa3d4ac8488216b',1,'FileWriter::Print()']]],
+  ['printpool_37',['PrintPool',['../class_command.html#a28395b97e5c7bd9dc445aaf127872a35',1,'Command']]],
+  ['printstring_38',['PrintString',['../class_command.html#a10e83608c398fe31e59802d5b73c8498',1,'Command']]],
+  ['processcommand_39',['ProcessCommand',['../class_i_command_handler.html#a3bc9861070a74343168464a87f3da54a',1,'ICommandHandler::ProcessCommand()'],['../class_command.html#a96e0fefe59247152904e19f5b0a9c3a4',1,'Command::ProcessCommand()'],['../class_static_command_handler.html#a995a55e4e101ec81e389b1f4368391bb',1,'StaticCommandHandler::ProcessCommand()'],['../class_dynamic_command_handler.html#a82799814b1609e27baa0ca18c1428f60',1,'DynamicCommandHandler::ProcessCommand()']]],
+  ['pushpool_40',['PushPool',['../class_command.html#ac0a5aea04ec40da1d24c02d0541d308d',1,'Command']]]
 ];

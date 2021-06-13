@@ -21,5 +21,10 @@ int main(int argn, char** argc)
 		if (cmd.ProcessCommand(s) == false) break;
 	}
 
+	if (!cin)
+	{
+		cmd.ProcessCommand(EndOfFileString);
+	}
+
 	return 0;
 }

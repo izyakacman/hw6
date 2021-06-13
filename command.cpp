@@ -3,122 +3,127 @@
 #include <chrono>
 
 /**
-*	Обработка команды в режиме статических блоков
+*	Process command int the static mode
 */
-bool StaticCommandHandler::ProcessCommand(Command* cmd, const std::string& s) 
+ICommandHandlerPtr StaticCommandHandler::ProcessCommand(Command* cmd, const std::string& s, bool& exit)
 {
+	exit = true;
+
 	if (s != EndOfFileString)
 	{
+		exit = false;
+
 		if (s == "{")
 		{
 			cmd->PrintPool();
-			cmd->SetCurrent(ICommandHandlerPtr{ new DinamicCommandHandler(m_count) });
+			return ICommandHandlerPtr{ new DynamicCommandHandler(count_) };
 		}
-		else
+
+		cmd->PushPool(s);
+
+		if (cmd->GetPoolSize() == count_)
 		{
-			cmd->PushPool(s);
-
-			if (cmd->GetPoolSize() == m_count)
-			{
-				cmd->PrintPool();
-			}
+			cmd->PrintPool();
 		}
-
-		return true;
 	}
 	else
 	{
 		cmd->PrintPool();
-		return false;
 	}
+
+	return nullptr;
 }
 
 /**
-*	Обработка команды в режиме динамических блоков
+*	Process command int the dynamic mode
 */
-bool DinamicCommandHandler::ProcessCommand(Command* cmd, const std::string& s)
+ICommandHandlerPtr DynamicCommandHandler::ProcessCommand(Command* cmd, const std::string& s, bool& exit)
 {
-	if (s != EndOfFileString)
+	exit = true;
+
+	if(s == EndOfFileString)
+		return nullptr;
+
+	exit = false;
+
+	if (s == "{")
 	{
-		if (s == "{")
+		++openBraceCount_;
+	}
+	else
+	if (s == "}")
+	{
+		if (openBraceCount_ == 0)
 		{
-			++m_open_brace_count;
-		}
-		else
-		if (s == "}")
-		{
-			if (m_open_brace_count == 0)
-			{
-				cmd->PrintPool();
-				cmd->SetCurrent(ICommandHandlerPtr{ new StaticCommandHandler(m_count) });
-			}
-			else
-			{
-				--m_open_brace_count;
-			}
-		}
-		else
-		{
-			cmd->PushPool(s);
+			cmd->PrintPool();
+			return ICommandHandlerPtr{ new StaticCommandHandler(count_) };
 		}
 
-		return true;
+		--openBraceCount_;
 	}
 	else
 	{
-		return false;
+		cmd->PushPool(s);
 	}
+
+	return nullptr;
 }
 
-Command::Command(int count) : m_count{ count }
+Command::Command(int count) : count_{ count }
 {
-	m_handler = ICommandHandlerPtr{ new StaticCommandHandler(m_count) };
+	handler_ = ICommandHandlerPtr{ new StaticCommandHandler(count_) };
+
+	writersPool_.push_back(IWriterPtr{ new CoutWriter });
+	writersPool_.push_back(IWriterPtr{ new FileWriter });
 }
 
 /**
-*	Добавление команды в блок команд
+*	Add command int the block
 */
 void Command::PushPool(const std::string& s)
 {
-	if (m_pool.size() == 0)
+	if (pool_.size() == 0)
 	{
-		m_first_cmd_time = std::chrono::duration_cast<std::chrono::seconds>(std::chrono::system_clock::now().time_since_epoch()).count();
+		firstCmdTime_ = std::chrono::duration_cast<std::chrono::seconds>(std::chrono::system_clock::now().time_since_epoch()).count();
 	}
 
-	m_pool.push_back(s);
+	pool_.push_back(s);
 }
 
 /**
-*	Вывод строки в консоль и в файл
+*	Output string
 */
-void Command::PrintString(std::fstream& f, const std::string& s)
+void Command::PrintString(const std::string& s) const
 {
-	std::cout << s;
-	f << s;
+	for (auto& writerPtr : writersPool_)
+	{
+		writerPtr->SetTime(firstCmdTime_);
+		writerPtr->Print(s);
+	}
 }
 
 /**
-*	Вывод блока команд
+*	Output block of commands
 */
 void Command::PrintPool()
 {
-	if (m_pool.size())
+	CoutWriter coutWriter;
+
+	if (pool_.size())
 	{
-		std::fstream file_stream("bulk" + std::to_string(m_first_cmd_time) + ".log", std::ios::out);
+		PrintString("bulk: ");
 
-		PrintString(file_stream, "bulk: ");
-
-		for(int i=0; i < m_pool.size(); ++i)
+		for(int i=0; i < pool_.size(); ++i)
 		{
-			PrintString(file_stream, m_pool[i]);
+			PrintString(pool_[i]);
 
-			if (i != m_pool.size() - 1)
+			if (i != pool_.size() - 1)
 			{
-				PrintString(file_stream, ", ");
+				PrintString(", ");
 			}
 		}
-		PrintString(file_stream, "\n");
+		PrintString("\n");
 
-		m_pool.clear();
+		pool_.clear();
 	}
 }
